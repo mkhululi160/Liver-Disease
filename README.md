@@ -4,23 +4,21 @@ Predicting liver disease from routine blood test results using a Random Forest c
 Given blood test results and basic patient demographics, can we predict whether a patient has liver disease — without invasive procedures?
 Business value: Non-invasive screening to prioritise high-risk patients for confirmatory testing, reducing unnecessary procedures and costs.
 📊 Dataset
-________________________________________________________________________
-Attribute   | Detail                                                    |
-____________|___________________________________________________________
-Source      | liver_patient_dataset.csv                                 |
-____________|___________________________________________________________
-Rows        | 583 patients                                              |      
-____________|___________________________________________________________|
-Features.   |  10 (blood results + demographics) 
-____________|___________________________________________________________
-Target.     | Liver Disease / No Liver Disease
-____________|___________________________________________________________
-Class split | 71.4% Liver Disease, 28.6% No Disease
-
+Attribute
+Detail
+Source
+liver_patient_dataset.csv
+Rows
+583 patients
+Features
+10 (blood results + demographics)
+Target
+Liver Disease / No Liver Disease
+Class split
+71.4% Liver Disease, 28.6% No Disease
 Features used in model: TB, DB, Alkphos, Sgpt, Sgot, TP, ALB
 🔧 Workflow
-Load data → Clean & encode → Train/test split → Train model → Evaluate → Feature importance
-
+Code
 Data Cleaning — Converted A/G Ratio from string to numeric (handled ? entries), checked for nulls across all columns
 Target Encoding — Liver Disease → 1, No Liver Disease → 0
 Train/Test Split — 80/20 split, random_state=42
